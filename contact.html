@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact — WAVE Radio</title>
+        <meta name="description" content="Requests, shout-outs, demos, or just say hi from wherever you're tuning in.">
+        <meta property="og:title" content="Contact — WAVE Radio">
+        <meta property="og:description" content="Let's talk.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600;700;800;900&display=swap">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-inner">
+                <a href="index.html" class="logo"><img src="assets/logo%20400x400.png" style="max-width: 10ch;"></a>
+                <nav class="nav">
+                    <a href="index.html">HOME</a>
+                    <span class="dot"></span>
+                    <a href="about.html">ABOUT</a>
+                    <span class="dot"></span>
+                    <a href="contact.html" class="active">CONTACT</a>
+                </nav>
+                <div class="header-right">
+                    <div class="live-pill">
+                        <span class="pdot"></span>
+                        <span class="live-label">ON AIR</span>
+                    </div>
+                    <button id="menuBtn" class="menu-btn" aria-label="Toggle menu"></button>
+                </div>
+            </div>
+            <nav id="mobileNav" class="mobile-nav">
+                <div class="mobile-nav-inner">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="contact.html" class="active">CONTACT</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="page" style="max-width:64rem">
+                <div class="contact-head">
+                    <h1>Let's talk.</h1>
+                    <p>Requests, shout-outs, demos, or just say hi from wherever you're tuning in.</p>
+                </div>
+                <div class="contact-grid">
+                    <form id="contactForm" class="glass-primary form" novalidate>
+                        <div class="title">Send a message</div>
+                        <input name="name" placeholder="Name" required>
+                        <input name="subject" placeholder="Subject" required>
+                        <textarea name="message" placeholder="Message" required rows="5"></textarea>
+                        <div class="submit-row">
+                            <button type="submit">
+                                <span class="label">Send message</span>
+                                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="contact-side">
+                        <div class="glass-accent contact-card">
+                            <div class="h">Email</div>
+                            <div class="row">
+                                <div class="contact-icon">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <a href="mailto:hello@waveradio.example">hello@waveradio.example</a>
+                                    <div class="sub">Replies usually within a day or two.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-accent contact-card">
+                            <div class="h">Phone</div>
+                            <div class="row">
+                                <div class="contact-icon">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <a href="tel:+18086006926">+1 (808) 600-6926</a>
+                                    <div class="sub">Toronto, Canada · EST</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Player bar -->
+        <div class="player">
+            <div class="player-inner">
+                <div class="player-meta">
+                    <div class="player-art" id="playerArt">
+                        <div class="ph">wave</div>
+                    </div>
+                    <div class="player-text">
+                        <div class="player-title">Wave Radio</div>
+                        <div class="player-artist">Live Stream</div>
+                    </div>
+                </div>
+                <button id="playBtn" class="play-btn" aria-label="Play"></button>
+                <div class="player-vol">
+                    <span id="volIcon"></span>
+                    <input id="volRange" type="range" min="0" max="100" value="80" aria-label="Volume">
+                </div>
+                <div style="position:relative">
+                    <button id="serverBtn" class="server-btn" aria-label="Choose server"></button>
+                    <div id="serverMenu" class="server-menu"></div>
+                </div>
+            </div>
+            <div id="mixedWarn" class="mixed-warning" style="display:none">
+                UK servers use HTTP and can't play directly on a secure page. The stream opened in a new tab — or use a Zeno server.
+                <span style="opacity:.7">(<span class="srv-label"></span>)</span>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
