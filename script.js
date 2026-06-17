@@ -7,12 +7,12 @@
 
 /* ---------- Stream servers (edit here) ---------- */
 const STREAM_SERVERS = [
-  { id: "zeno-primary", label: "ZENO PRIMARY", url: "https://stream.zeno.fm/ss9962n09u8uv", flag: "🇺🇸" },
-  { id: "zeno-backup",  label: "ZENO BACKUP",  url: "https://stream.zeno.fm/6s99x08q54zuv", flag: "🇺🇸" },
-  { id: "uk-1",         label: "UK SERVER 1",  url: "https://waveplayermain.mooo.com/stream",   flag: "🇬🇧" },
-  { id: "uk-2",         label: "UK SERVER 2",  url: "https://waveplayerbackup.mooo.com/stream", flag: "🇬🇧" },
+  { id: "zeno-primary", label: "ZENO PRIMARY", url: "zeno1.waveradio.eu.org", flag: "🇺🇸" },
+  { id: "zeno-backup",  label: "ZENO BACKUP",  url: "zeno2.waveradio.eu.org", flag: "🇺🇸" },
+  { id: "uk-1",         label: "UK SERVER 1",  url: "listen1.waveradio.eu.org/stream",   flag: "🇬🇧" },
+  { id: "uk-2",         label: "UK SERVER 2",  url: "listen2.waveradio.eu.org/stream", flag: "🇬🇧" },
 ];
-const METADATA_URL = "https://waveradio.work.gd/status-json.xsl";
+const METADATA_URL = "data.waveradio.eu.org/status-json.xsl";
 
 /* ---------- Player state ---------- */
 const audio = new Audio();
