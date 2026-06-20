@@ -9,7 +9,7 @@
 const STREAM_SERVERS = [
   { id: "zeno-primary", label: "ZENO PRIMARY", url: "https://zeno1.waveradio.eu.org", flag: "🇺🇸" },
   { id: "zeno-backup",  label: "ZENO BACKUP",  url: "https://zeno2.waveradio.eu.org", flag: "🇺🇸" },
-  { id: "uk-1",         label: "UK SERVER 1",  url: "https://listen1.waveradio.eu.org/stream",   flag: "🇬🇧" },
+  { id: "uk-1",         label: "UK SERVER 1",  url: "https://listen1.waveradio.eu.org",   flag: "🇬🇧" },
   { id: "uk-2",         label: "UK SERVER 2",  url: "https://listen2.waveradio.eu.org", flag: "🇬🇧" },
 ];
 const METADATA_URL = "https://data.waveradio.eu.org/status-json.xsl";
